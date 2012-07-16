@@ -11,6 +11,9 @@ if ( ! isset( $content_width ) )
 // Sets up the options panel and default functions
 require_once( TEMPLATEPATH . '/extensions/options-functions.php' );
 
+// Adds thumbnail support for any post type
+add_theme_support( 'post-thumbnails' );
+
 // Tell WordPress to run portfoliopress_setup() when the 'after_setup_theme' hook is run
 add_action( 'after_setup_theme', 'portfoliopress_setup' );
  
