@@ -1,6 +1,7 @@
-jQuery(window).load(function($){
-	
-	// Portfolio Archive
+(function($){
+  $(window).load(function() {
+			
+  // Portfolio Archive
     $("#portfolio .portfolio-item").hover(function(){
     	if ( !$(this).hasClass('no-thumb') ) {
         $(this).children(".title-overlay").stop(true).fadeTo(300, 1.0); // Sets 100% on hover
@@ -33,5 +34,5 @@ jQuery(window).load(function($){
     }, function(){
     	$(this).children('h3').slideUp(200);
     });
-    
-});
+	});
+})(jQuery);
