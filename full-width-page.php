@@ -15,10 +15,11 @@ get_header(); ?>
 			<?php the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<? if(!get_post_meta($post->ID, 'hidetitle', true)) :?>
 				<header class="entry-header">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				</header><!-- .entry-header -->
-
+			<? endif; ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 					<?php wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'portfoliopress' ) . '&after=</div>' ); ?>
